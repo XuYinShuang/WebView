@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:singleLine="true"
+            android:id="@+id/txtWangZhi"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="输入指定网址进行跳转页面" />
+
+        <Button
+            android:onClick="onClick"
+            android:id="@+id/btnSkip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="跳转" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:max="100"
+        android:visibility="gone"
+        style="?android:attr/progressBarStyleHorizontal"/>
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"></WebView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:onClick="onClick"
+            android:layout_weight="1"
+            android:id="@+id/btnQianJin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="前进" />
+
+        <Button
+            android:onClick="onClick"
+            android:layout_weight="1"
+            android:id="@+id/btnHouTui"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="后退" />
+
+        <Button
+            android:onClick="onClick"
+            android:layout_weight="1"
+            android:id="@+id/btnShuaXin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="刷新" />
+    </LinearLayout>
+</LinearLayout>
